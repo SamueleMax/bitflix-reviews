@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitFlix Reviews - Tech Movie Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-film"></i>
+                <span>BitFlix Reviews</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#interview">Interview</a></li>
+                <li><a href="#whatif">What If...</a></li>
+                <li><a href="#top5">Top 5</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>BitFlix Reviews</h1>
+            <p>Movie reviews for the tech-savvy audience</p>
+            <button class="cta-button">Latest Reviews</button>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <h2>Featured Reviews</h2>
+        <p class="section-description">Analyzing movies through the lens of technology</p>
+        
+        <div class="review-grid">
+            <div class="review-card">
+                <div class="review-img" style="background-image: url('./assets/matrix.jpg')"></div>
+                <div class="review-content">
+                    <div class="tech-score">
+                        <span>Tech Score:</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>The Matrix Resurrections (2021)</h3>
+                    <p class="review-excerpt">The sequel's visual effects utilize ray tracing technology to create more realistic lighting within the Matrix simulation, but the neural network concepts are oversimplified compared to actual AI development...</p>
+                    <a href="#" class="read-more">Read Full Review</a>
+                </div>
+            </div>
+    
+            <div class="review-card">
+                <div class="review-img" style="background-image: url('./assets/bladerunner.jpg')"></div>
+                <div class="review-content">
+                    <div class="tech-score">
+                        <span>Tech Score:</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <h3>Blade Runner (1982)</h3>
+                    <p class="review-excerpt">Ridley Scott's neo-noir masterpiece pioneered visual effects techniques that influenced generations of sci-fi films. The practical miniature work for the cityscape remains a benchmark for pre-CGI production design...</p>
+                    <a href="#" class="read-more">Read Full Review</a>
+                </div>
+            </div>
+    
+            <div class="review-card">
+                <div class="review-img" style="background-image: url('./assets/a-space-odyssey.png'); background-position: center"></div>
+                <div class="review-content">
+                    <div class="tech-score">
+                        <span>Tech Score:</span>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>2001: A Space Odyssey (1968)</h3>
+                    <p class="review-excerpt">Kubrick's sci-fi epic features astonishingly accurate spaceflight physics and computer interfaces decades ahead of their time. The HAL 9000 remains one of cinema's most prescient depictions of artificial intelligence...</p>
+                    <a href="#" class="read-more">Read Full Review</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="full-reviews">
+            <div class="full-review" id="matrix-review">
+                <h3>The Matrix Resurrections (2021)</h3>
+                <div class="review-details">
+                    <div class="tech-score">
+                        <span>Tech Score: 4/5</span>
+                    </div>
+                    <div class="tech-specs">
+                        <span><i class="fas fa-microchip"></i> VFX: Ray Tracing Rendering</span>
+                        <span><i class="fas fa-code"></i> Featured Tech: Neural Networks, Modal Realism</span>
+                        <span><i class="fas fa-server"></i> Data Accuracy: 72%</span>
+                    </div>
+                </div>
+                <div class="review-full-text">
+                    <p>The Matrix Resurrections brings us back to the simulated world with upgraded visuals that leverage real-time ray tracing technology, similar to what's used in modern game engines like Unreal Engine 5. The rendering pipeline creates more physically accurate lighting, particularly noticeable in the "modal" sequences where light interacts with glass and metal surfaces.</p>
+                    
+                    <p>From a technical perspective, the film's representation of neural networks and how they might be used to trap human consciousness shows a basic understanding of machine learning concepts, but falls short on implementation details. The concept of "modal instances" bears resemblance to virtual environments used in reinforcement learning, but the film oversimplifies how such systems would actually be developed and maintained.</p>
+                    
+                    <p>The code snippets visible on screens throughout the film do contain actual programming syntax, primarily Python with some C++ for the lower-level systems. However, the algorithms shown would be insufficient for the complex simulations described. The film does accurately portray the idea of "backdoors" and exploits within complex systems, which resonates with real-world cybersecurity concerns.</p>
+                    
+                    <p>Where the film truly excels technologically is in its visual representation of digital constructs. The use of volumetric capture for certain sequences allowed for 3D reconstruction of actors that could be manipulated within the digital environment - a technique that's increasingly used in modern VFX pipelines.</p>
+                </div>
+            </div>
+    
+            <div class="full-review" id="bladerunner-review">
+                <h3>Blade Runner (1982)</h3>
+                <div class="review-details">
+                    <div class="tech-score">
+                        <span>Tech Score: 4.5/5</span>
+                    </div>
+                    <div class="tech-specs">
+                        <span><i class="fas fa-microchip"></i> VFX: Practical Miniatures, Optical Compositing</span>
+                        <span><i class="fas fa-code"></i> Featured Tech: Genetic Engineering, Voight-Kampff Test</span>
+                        <span><i class="fas fa-server"></i> Data Accuracy: 85%</span>
+                    </div>
+                </div>
+                <div class="review-full-text">
+                    <p>Ridley Scott's Blade Runner remains a technical masterpiece even four decades after its release. The film's cityscape visuals were created using intricate miniature work, with the iconic Tyrell Corporation pyramid standing approximately 4 feet tall. These miniatures were filmed using multiple passes with different lighting setups, then composited using analog optical printing techniques – the predecessor to today's digital compositing.</p>
+                    
+                    <p>The technical innovation that truly sets Blade Runner apart was its pioneering use of what we now call "kitbashing" – repurposing parts from commercial model kits to create the detailed futuristic architecture and vehicles. This approach has become standard practice in both practical and digital VFX production. Douglas Trumbull, who worked on 2001: A Space Odyssey, designed many of the film's special effects using ingenious practical solutions.</p>
+                    
+                    <p>From a computing perspective, the Voight-Kampff machine – used to detect replicants – represents an interesting parallel to modern emotional recognition AI systems. While presented as a polygraph-like device measuring involuntary physiological responses, its concept closely resembles current machine learning approaches to emotion detection through micro-expressions and pupil dilation – techniques only becoming viable with modern computational power.</p>
+                    
+                    <p>The film's genetic engineering premise was remarkably forward-thinking for 1982. The concept of designed organisms with programmed lifespans (4-year termination) parallels CRISPR gene editing capabilities now being developed. The film's exploration of memory implantation also prefigured research into false memory formation and neural encoding that wouldn't begin in earnest until decades later.</p>
+                    
+                    <p>The Esper machine – used by Deckard to analyze and navigate 3D space within a 2D photograph – anticipated computational image processing techniques that wouldn't become reality until the 2010s. Today, AI systems can indeed extrapolate 3D information from 2D images in ways remarkably similar to what the film imagined.</p>
+                </div>
+            </div>
+    
+            <div class="full-review" id="2001-review">
+                <h3>2001: A Space Odyssey (1968)</h3>
+                <div class="review-details">
+                    <div class="tech-score">
+                        <span>Tech Score: 5/5</span>
+                    </div>
+                    <div class="tech-specs">
+                        <span><i class="fas fa-microchip"></i> VFX: Front Projection, Slit-Scan Photography</span>
+                        <span><i class="fas fa-code"></i> Featured Tech: AI, Zero Gravity Physics, Life Support Systems</span>
+                        <span><i class="fas fa-server"></i> Data Accuracy: 94%</span>
+                    </div>
+                </div>
+                <div class="review-full-text">
+                    <p>Stanley Kubrick's 2001: A Space Odyssey stands as perhaps the most technically accurate science fiction film ever made, particularly remarkable considering it was released a full year before humans actually landed on the moon. The film's special effects were revolutionary, with Kubrick and his team developing entirely new techniques to achieve their vision. The most notable was the "front projection" method used for the Dawn of Man sequences, which provided unprecedented realism compared to traditional rear projection.</p>
+                    
+                    <p>From a computing perspective, HAL 9000 remains one of cinema's most accurate portrayals of artificial general intelligence. Unlike many sci-fi depictions, HAL demonstrates a nuanced intelligence with emotional reasoning, strategic thinking, and the ability to interpret human behavior – all capabilities only now being approached by modern AI research. The film correctly anticipated that advanced AI would use computer vision (HAL's red eye interfaces) and natural language processing as primary interfaces rather than relying on text input.</p>
+                    
+                    <p>The spacecraft physics in 2001 are meticulously accurate. Kubrick consulted extensively with NASA scientists to ensure that all space scenes adhered to actual orbital mechanics. The film correctly depicted the silence of space (no sound in vacuum), the need for centrifugal force to create artificial gravity (the rotating Discovery One), and the precise mechanical docking procedures that would be required for spacecraft. The EVA sequences accurately portray the challenges of maneuvering in space without reference points.</p>
+                    
+                    <p>The film's user interfaces were remarkably prescient. The tablet-like devices used by the astronauts to watch news broadcasts are nearly identical to modern tablets, and the video calling system shown in the space station scenes correctly anticipated modern videoconferencing. The cockpit displays showing digital readouts and system status information anticipated the glass cockpit designs that wouldn't become standard in actual spacecraft and aircraft until decades later.</p>
+                    
+                    <p>Perhaps most impressive is the film's accurate depiction of the challenges of long-duration spaceflight, including the hibernation technology (which is now being actively researched by NASA), the psychological challenges of isolation (HAL's breakdown), and the sophisticated life support systems required. The attention to detail extends to the centrifugal toilet with instruction placard – a practical design challenge that real space engineers have had to solve.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interview" class="interview">
+        <h2>Tech Behind The Scenes</h2>
+        <p class="section-description">Exclusive interviews with directors and tech leads</p>
+
+        <div class="interview-container">
+            <div class="interview-image">
+                <img src="./assets/james-cameron.jpg" alt="Director Interview">
+            </div>
+            <div class="interview-content">
+                <h3>James Cameron on Avatar: The Way of Water</h3>
+                <div class="interview-text">
+                    <p><span class="reported-speech">James Cameron said that they had developed entirely new underwater motion capture technology for the sequel.</span> The director explained that traditional motion capture wouldn't work underwater due to light refraction issues.</p>
+                    
+                    <p><span class="reported-speech">The VFX supervisor revealed that they had written over 2 million lines of new code for the water simulation alone.</span> She mentioned that they needed to create a specialized physics engine just to handle the complex water interactions.</p>
+                    
+                    <p><span class="reported-speech">Cameron claimed the rendering farm for Avatar 2 consumed enough electricity to power a small city.</span> He told us that a single frame could take up to 24 hours to render with all effects enabled.</p>
+                    
+                    <p><span class="reported-speech">The lead programmer stated that they had to invent new compression algorithms just to store the massive amount of motion capture data.</span> He admitted that they had initially underestimated the storage requirements by several petabytes.</p>
+                    
+                    <p><span class="reported-speech">The technology director confirmed that they had integrated machine learning into their animation pipeline for the first time.</span> She explained that AI helped them automate the most tedious aspects of character animation while preserving the nuances of the actors' performances.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="whatif" class="whatif">
+        <h2>What If...</h2>
+        <p class="section-description">Exploring alternate technological timelines in cinema</p>
+
+        <div class="whatif-cards">
+            <div class="whatif-card">
+                <div class="whatif-image">
+                    <img src="https://via.placeholder.com/300x200/1a1a2e/ffffff?text=Iron+Man" alt="Iron Man What If">
+                </div>
+                <div class="whatif-content">
+                    <h3>What If Iron Man Used Open Source?</h3>
+                    <p><span class="conditional">If Tony Stark had embraced open source software for his suit's operating system, he would have benefited from thousands of contributors finding and patching security vulnerabilities.</span></p>
+                    <p><span class="conditional">If JARVIS had been built on TensorFlow instead of proprietary AI architecture, Stark would have saved billions in development costs and achieved AGI much faster.</span></p>
+                    <p>The proprietary nature of Stark's technology ultimately became its greatest weakness. Open sourcing the Iron Man schematics (minus the arc reactor) might have created a distributed defense network that Thanos couldn't have overcome.</p>
+                </div>
+            </div>
+
+            <div class="whatif-card">
+                <div class="whatif-image">
+                    <img src="https://via.placeholder.com/300x200/1a1a2e/ffffff?text=The+Matrix" alt="The Matrix What If">
+                </div>
+                <div class="whatif-content">
+                    <h3>What If The Matrix Had Better Security?</h3>
+                    <p><span class="conditional">If the Machines had implemented proper authentication protocols in the Matrix, Neo would never have been able to exploit the system and bend its rules.</span></p>
+                    <p><span class="conditional">Had the Matrix been secured with blockchain verification for each transaction within the simulation, the anomalies created by the One would have been immediately detected and isolated.</span></p>
+                    <p>The entire premise of the Matrix trilogy hinges on what is essentially a massive security flaw in the system architecture - allowing consciousness to override simulation rules.</p>
+                </div>
+            </div>
+
+            <div class="whatif-card">
+                <div class="whatif-image">
+                    <img src="https://via.placeholder.com/300x200/1a1a2e/ffffff?text=Jurassic+Park" alt="Jurassic Park What If">
+                </div>
+                <div class="whatif-content">
+                    <h3>What If Jurassic Park Had Modern DevOps?</h3>
+                    <p><span class="conditional">If Jurassic Park had implemented proper continuous integration and testing practices, Dennis Nedry's backdoor code would have been caught in the code review process.</span></p>
+                    <p><span class="conditional">Had the park used containerization and proper privilege separation, a single developer wouldn't have been able to compromise the entire security system.</span></p>
+                    <p>The lack of redundancy and disaster recovery planning was perhaps the most egregious technical oversight in the park's development. Modern cloud-based systems with geographic redundancy would have prevented the catastrophic failure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="top5" class="top5">
+        <h2>Top 5 Nerdy Movies</h2>
+        <p class="section-description">The ultimate watch list for tech enthusiasts</p>
+    
+        <div class="top5-list">
+            <div class="top5-item">
+                <div class="rank">1</div>
+                <div class="top5-content">
+                    <h3>WarGames (1983)</h3>
+                    <div class="tech-tags">
+                        <span>Hacking</span>
+                        <span>Cold War Computing</span>
+                        <span>AI Ethics</span>
+                    </div>
+                    <p>This ahead-of-its-time thriller accurately depicts many aspects of early hacking culture, including acoustic couplers, war dialers, and back door exploits. It introduced many cybersecurity concepts to the mainstream and its WOPR supercomputer presents a surprisingly realistic depiction of reinforcement learning gone wrong.</p>
+                </div>
+            </div>
+    
+            <div class="top5-item">
+                <div class="rank">2</div>
+                <div class="top5-content">
+                    <h3>Back to the Future (1985)</h3>
+                    <div class="tech-tags">
+                        <span>Time Travel</span>
+                        <span>Nuclear Physics</span>
+                        <span>Circuit Design</span>
+                    </div>
+                    <p>While taking creative liberties with its flux capacitor, the film features remarkably detailed circuit diagrams and electronic engineering concepts. Doc Brown's improvised solutions showcase genuine problem-solving approaches, and the film's time paradox handling has influenced discussions in theoretical physics.</p>
+                </div>
+            </div>
+    
+            <div class="top5-item">
+                <div class="rank">3</div>
+                <div class="top5-content">
+                    <h3>E.T. the Extra-Terrestrial (1982)</h3>
+                    <div class="tech-tags">
+                        <span>Communications Engineering</span>
+                        <span>Radio Technology</span>
+                        <span>Xenobiology</span>
+                    </div>
+                    <p>Beyond its emotional story, E.T. features a remarkably accurate DIY communications device built from household electronics. The improvised radio transmitter that Elliott helps E.T. construct demonstrates actual principles of radio frequency engineering, with components that could theoretically amplify and direct signals toward deep space.</p>
+                </div>
+            </div>
+    
+            <div class="top5-item">
+                <div class="rank">4</div>
+                <div class="top5-content">
+                    <h3>Star Trek II: The Wrath of Khan (1982)</h3>
+                    <div class="tech-tags">
+                        <span>Computer Interfaces</span>
+                        <span>Genetic Engineering</span>
+                        <span>Space Physics</span>
+                    </div>
+                    <p>The definitive Star Trek film features the franchise's most believable computing concepts, including the vector-based tactical displays and the Genesis device simulation. Its famous Kobayashi Maru scenario presents one of film's best explorations of software testing, edge cases, and "thinking outside the box" in programming.</p>
+                </div>
+            </div>
+    
+            <div class="top5-item">
+                <div class="rank">5</div>
+                <div class="top5-content">
+                    <h3>They Live (1988)</h3>
+                    <div class="tech-tags">
+                        <span>Signal Processing</span>
+                        <span>Perception Technology</span>
+                        <span>Surveillance Systems</span>
+                    </div>
+                    <p>John Carpenter's cult classic features an ingenious technical premise: special sunglasses that filter out electromagnetic signals manipulating human perception. While presented through a sci-fi lens, the film explores concepts relevant to signal processing, perceptual manipulation, and augmented reality technologies, all wrapped in a commentary on media and consumerism.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About BitFlix Reviews</h2>
+        <p class="section-description">Where cinema meets technology</p>
+
+        <div class="about-content">
+            <p>Founded in 2025 by a group of film-loving computer science students, BitFlix Reviews was created to analyze popular movies and TV shows through the lens of technology. Our team consists of software developers, VFX artists, and cybersecurity specialists who bring their technical expertise to film criticism.</p>
+            <p>We believe that understanding the technology behind films enhances the viewing experience and helps separate science fiction from science fact. Whether analyzing the feasibility of fictional tech or appreciating the real innovations that make movie magic possible, BitFlix Reviews provides the definitive technical perspective on cinema.</p>
+            <p>Our reviews focus not just on the entertainment value of films, but on their technical accuracy, innovative use of VFX technology, and representation of computing concepts. We interview filmmakers about their technical challenges and explore how emerging technologies are shaping the future of filmmaking.</p>
+        </div>
+
+        <div class="team">
+            <h3>Our Team</h3>
+            <div class="team-members">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="./assets/person-placeholder.jpg" alt="Team Member">
+                    </div>
+                    <h4>Samuele Max</h4>
+                    <p>VFX Analysis & Web Design</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="./assets/person-placeholder.jpg" alt="Team Member">
+                    </div>
+                    <h4>Alex Turing</h4>
+                    <p>AI Consultant & Reviewer</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="./assets/person-placeholder.jpg" alt="Team Member">
+                    </div>
+                    <h4>Julia Net</h4>
+                    <p>Tech Interviewer & Editor</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="./assets/person-placeholder.jpg" alt="Team Member">
+                    </div>
+                    <h4>Marco Ruby</h4>
+                    <p>Database Expert & Film Historian</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-film"></i>
+                <span>BitFlix Reviews</span>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#interview">Interview</a></li>
+                    <li><a href="#whatif">What If...</a></li>
+                    <li><a href="#top5">Top 5</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 BitFlix Reviews - All Rights Reserved</p>
+            <p>Created for educational purposes by IT students</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="style-switcher.js"></script>
+</body>
+</html>
