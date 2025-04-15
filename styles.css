@@ -1,15 +1,22 @@
 /* Base Styles and Variables */
 :root {
-    --primary-color: #00b4d8;
-    --secondary-color: #4361ee;
-    --dark-color: #1a1a2e;
-    --light-color: #f8f9fa;
-    --accent-color: #ff5e78;
-    --text-color: #333;
-    --light-text: #f1f1f1;
-    --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --primary-color: #39ff14;
+    --secondary-color: #ff00ff;
+    --dark-color: #000000;
+    --light-color: #ffffff; 
+    --accent-color: #00ffff;
+    --text-color: #ffffff;
+    --light-text: #cccccc;
+    --grid-color: rgba(57, 255, 20, 0.1);
+    --box-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
     --transition: all 0.3s ease;
+}
+
+@font-face {
+    font-family: 'VCR OSD Mono';
+    src: url('https://cdn.jsdelivr.net/gh/DaltonMaag/VCR-OSD-mono@master/VCR_OSD_MONO_1.001.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
@@ -18,29 +25,70 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'VCR OSD Mono', monospace;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: #f5f5f5;
-    overflow-x: hidden;
+    background-color: var(--dark-color);
+    background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 30px 30px;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    z-index: 1000;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
+    font-family: 'VCR OSD Mono', monospace;
+    font-weight: normal;
     margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+h3 {
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px var(--secondary-color);
 }
 
 section {
     padding: 5rem 2rem;
+    position: relative;
 }
 
 .section-description {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 3rem;
-    color: #666;
+    color: var(--light-text);
     font-size: 1.1rem;
 }
 
@@ -52,6 +100,7 @@ nav {
     min-height: 8vh;
     padding: 1rem 2rem;
     background-color: var(--dark-color);
+    border-bottom: 2px solid var(--primary-color);
     position: fixed;
     width: 100%;
     top: 0;
@@ -59,17 +108,18 @@ nav {
 }
 
 .logo {
-    color: var(--light-text);
+    color: var(--primary-color);
     display: flex;
     align-items: center;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
+    font-family: 'VCR OSD Mono', monospace;
     font-size: 1.5rem;
+    text-shadow: 0 0 10px var(--primary-color);
 }
 
 .logo i {
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px var(--secondary-color);
     margin-right: 0.5rem;
-    color: var(--primary-color);
 }
 
 .nav-links {
@@ -85,22 +135,22 @@ nav {
 .nav-links a {
     color: var(--light-text);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 0.9rem;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     transition: var(--transition);
     padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: 0;
+    text-transform: uppercase;
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
-    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
 }
 
 .burger {
     display: none;
-    cursor: pointer;
 }
 
 .burger div {
@@ -113,24 +163,21 @@ nav {
 
 /* Hero Section */
 .hero {
+    background: 
+        linear-gradient(
+            to bottom, 
+            rgba(0,0,0,0.8) 0%,
+            rgba(0,0,0,0.8) 100%
+        ),
+        url('./assets/hero.jpg');
+    background-position: center;
+    background-size: cover;
+    margin-top: 8vh;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    background: url('./assets/hero.jpg') no-repeat center center/cover;
-    position: relative;
-    margin-top: 8vh;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
 }
 
 .hero-text {
@@ -144,8 +191,35 @@ nav {
 .hero-text h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
-    letter-spacing: 2px;
     color: var(--primary-color);
+    text-shadow: 0 0 20px var(--primary-color);
+    position: relative;
+}
+
+.hero-text h1::before,
+.hero-text h1::after {
+    content: "BitFlix Reviews";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.hero-text h1::before {
+    color: var(--secondary-color);
+    z-index: -1;
+    transform: translateX(-5px) translateY(-5px);
+    opacity: 0.7;
+    text-shadow: 0 0 15px var(--secondary-color);
+}
+
+.hero-text h1::after {
+    color: var(--accent-color);
+    z-index: -2;
+    transform: translateX(5px) translateY(5px);
+    opacity: 0.7;
+    text-shadow: 0 0 15px var(--accent-color);
 }
 
 .hero-text p {
@@ -154,29 +228,29 @@ nav {
 }
 
 .cta-button {
-    background: var(--gradient);
-    color: white;
-    border: none;
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 0;
     padding: 0.8rem 2rem;
     font-size: 1rem;
-    border-radius: 50px;
     cursor: pointer;
-    font-weight: bold;
+    font-family: 'VCR OSD Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     transition: var(--transition);
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 0 10px var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+    text-decoration: none;
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    box-shadow: 0 0 20px var(--primary-color);
 }
 
 /* Reviews Section */
-.reviews {
-    background-color: #fff;
-    text-align: center;
-}
-
 .review-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -186,16 +260,9 @@ nav {
 }
 
 .review-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-}
-
-.review-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
 }
 
 .review-img {
@@ -203,6 +270,7 @@ nav {
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .review-content {
@@ -217,33 +285,35 @@ nav {
 }
 
 .tech-score span {
-    font-weight: bold;
+    font-weight: normal;
     margin-right: 0.5rem;
     font-size: 0.9rem;
-    color: #666;
+    color: var(--accent-color);
 }
 
 .stars {
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .review-excerpt {
     margin-bottom: 1.5rem;
-    color: #666;
+    color: var(--light-text);
     font-size: 0.95rem;
 }
 
 .read-more {
     display: inline-block;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 0.9rem;
     transition: var(--transition);
+    text-shadow: 0 0 5px var(--secondary-color);
 }
 
 .read-more:hover {
-    color: var(--secondary-color);
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
 }
 
 /* Full Reviews */
@@ -254,10 +324,9 @@ nav {
 }
 
 .full-review {
-    background-color: #fff;
-    border-radius: 10px;
     padding: 2rem;
     margin-bottom: 2rem;
+    border: 2px solid var(--primary-color);
     box-shadow: var(--box-shadow);
     display: none;
 }
@@ -293,14 +362,16 @@ nav {
 
 /* Interview Section */
 .interview {
-    background-color: var(--dark-color);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
     color: var(--light-text);
     text-align: center;
 }
 
-.interview h2,
-.interview .section-description {
-    color: var(--light-text);
+.interview h2 {
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px var(--secondary-color);
 }
 
 .interview-container {
@@ -320,8 +391,8 @@ nav {
 
 .interview-image img {
     max-width: 100%;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 0 15px var(--secondary-color);
 }
 
 .interview-content {
@@ -336,17 +407,12 @@ nav {
 }
 
 .reported-speech {
-    font-style: italic;
-    color: var(--primary-color);
-    font-weight: 500;
+    color: var(--accent-color);
+    font-weight: normal;
+    text-shadow: 0 0 5px var(--accent-color);
 }
 
 /* What If Section */
-.whatif {
-    background-color: #f5f5f5;
-    text-align: center;
-}
-
 .whatif-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -356,15 +422,18 @@ nav {
 }
 
 .whatif-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--accent-color);
+    border-radius: 0;
+    box-shadow: 0 0 10px var(--accent-color);
 }
 
 .whatif-image img {
     width: 100%;
-    height: auto;
+    height: 300px;
+    border-bottom: 2px solid var(--accent-color);
+    object-fit: cover;
+    object-position: top;
 }
 
 .whatif-content {
@@ -373,13 +442,16 @@ nav {
 }
 
 .conditional {
-    font-weight: 500;
-    color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: normal;
+    text-shadow: 0 0 5px var(--primary-color);
 }
 
 /* Top 5 Section */
 .top5 {
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     text-align: center;
 }
 
@@ -391,10 +463,10 @@ nav {
 .top5-item {
     display: flex;
     margin-bottom: 2rem;
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--primary-color);
+    border-radius: 0;
+    box-shadow: 0 0 10px var(--primary-color);
 }
 
 .rank {
@@ -403,9 +475,11 @@ nav {
     align-items: center;
     width: 80px;
     font-size: 2rem;
-    font-weight: bold;
-    background: var(--gradient);
-    color: white;
+    font-weight: normal;
+    background-color: transparent;
+    color: var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
 }
 
 .top5-content {
@@ -422,16 +496,15 @@ nav {
 }
 
 .tech-tags span {
-    background-color: #f0f0f0;
-    padding: 0.3rem 0.8rem;
-    border-radius: 30px;
+    border: 1px solid var(--accent-color);
+    padding: 0.2rem 0.8rem;
     font-size: 0.8rem;
-    color: #666;
+    color: var(--accent-color);
+    text-shadow: 0 0 5px var(--accent-color);
 }
 
 /* About Section */
 .about {
-    background-color: #f5f5f5;
     text-align: center;
 }
 
@@ -485,9 +558,10 @@ nav {
 
 /* Footer */
 footer {
-    background-color: var(--dark-color);
+    background-color: black;
     color: var(--light-text);
     padding: 3rem 2rem;
+    border-top: 2px solid var(--secondary-color);
 }
 
 .footer-content {
@@ -497,19 +571,6 @@ footer {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto 2rem;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-
-.footer-logo i {
-    margin-right: 0.5rem;
-    color: var(--primary-color);
 }
 
 .footer-links ul {
@@ -529,7 +590,8 @@ footer {
 }
 
 .footer-links a:hover {
-    color: var(--primary-color);
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
 }
 
 .social-links {
@@ -541,20 +603,21 @@ footer {
     color: var(--light-text);
     text-decoration: none;
     font-size: 1.5rem;
+    margin: 0 10px;
     transition: var(--transition);
 }
 
 .social-links a:hover {
-    color: var(--primary-color);
-    transform: translateY(-3px);
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
 }
 
 .copyright {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(57, 255, 20, 0.3);
     font-size: 0.9rem;
-    color: #999;
+    color: #666;
 }
 
 /* Media Queries */
@@ -615,17 +678,30 @@ footer {
     }
 }
 
-.nav-active {
-    transform: translateX(0%);
+@keyframes scan {
+    0% {
+        background-position: 0 -100vh;
+    }
+    100% {
+        background-position: 0 100vh;
+    }
 }
 
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(
+        rgba(57, 255, 20, 0.05),
+        rgba(57, 255, 20, 0.05) 3px,
+        transparent 3px,
+        transparent 9px
+    );
+    background-size: 100% 9px;
+    animation: scan 15s linear infinite;
+    z-index: 1001;
 }
