@@ -14,7 +14,7 @@
 
 @font-face {
     font-family: 'VCR OSD Mono';
-    src: url('https://cdn.jsdelivr.net/gh/DaltonMaag/VCR-OSD-mono@master/VCR_OSD_MONO_1.001.ttf') format('truetype');
+    src: url('./assets/VCR_OSD_MONO_1.001.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -665,6 +665,17 @@ footer {
     
     .interview-content {
         width: 100%;
+    }
+
+    .top5-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rank {
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid var(--primary-color);
     }
     
     .footer-content {
