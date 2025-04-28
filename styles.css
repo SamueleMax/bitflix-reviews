@@ -530,6 +530,9 @@ nav {
 }
 
 .team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -548,6 +551,7 @@ nav {
 }
 
 .team-member h4 {
+    width: 200px;
     margin-bottom: 0.5rem;
 }
 
